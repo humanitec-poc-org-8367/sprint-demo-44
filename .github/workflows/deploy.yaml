@@ -55,6 +55,8 @@ jobs:
           cat <<EOF > humanitec.score.yaml
           apiVersion: humanitec.org/v1b1
           spec:
+            labels:
+              testapp: testlabel
             ingress:
               rules:
                 "\${resources.dns}": # This is the DNS record that we defined in the resources section
