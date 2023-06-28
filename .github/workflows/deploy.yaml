@@ -56,7 +56,7 @@ jobs:
           apiVersion: humanitec.org/v1b1
           spec:
             labels:
-              testapp: testlabel
+              hello: world
             ingress:
               rules:
                 "\${resources.dns}": # This is the DNS record that we defined in the resources section
