@@ -1,0 +1,7 @@
+site_name: 'sprint-demo-44 Docs'
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core
