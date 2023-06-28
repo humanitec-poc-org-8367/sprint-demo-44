@@ -55,6 +55,8 @@ jobs:
           cat <<EOF > humanitec.score.yaml
           apiVersion: humanitec.org/v1b1
           spec:
+            labels:
+              testapp: testlabel
             ingress:
               rules:
                 "\${resources.dns}": # This is the DNS record that we defined in the resources section
@@ -67,4 +69,4 @@ jobs:
               image: $ECR/$IMAGE:$TAG
           EOF
 
-          ./score-humanitec delta --env development --overrides ./humanitec.score.yaml --app sprint-demo-44 --org="${{ secrets.HUMANITEC_ORG_ID_POC_12 }}" --token "${{ secrets.HUMANITEC_TOKEN_POC_12 }}" --deploy
+          ./score-humanitec delta --env development1 --overrides ./humanitec.score.yaml --app sprint-demo-44 --org="${{ secrets.HUMANITEC_ORG_ID_POC_12 }}" --token "${{ secrets.HUMANITEC_TOKEN_POC_12 }}" --deploy
